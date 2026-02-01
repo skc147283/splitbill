@@ -1,4 +1,4 @@
-# Quick Action: Deploy SplitBill to Render.com
+    # Quick Action: Deploy SplitBill to Render.com
 
 ## 🚀 5-Minute Deployment Checklist
 
@@ -17,13 +17,12 @@
 
 ```
 Name:              splitbill-api
-Environment:       Node
 Region:            Oregon (closest to you)
 Branch:            main
-Build Command:     cd server && npm install && npm run build
-Start Command:     node server/dist/index.js
 Plan:              Free
 ```
+
+**Note**: Render will auto-detect the `Dockerfile` and use it automatically. You don't need to specify Build or Start commands.
 
 4. Click **"Advanced"**
 5. Add Environment Variables:
