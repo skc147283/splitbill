@@ -1,0 +1,30 @@
+{
+  "name": "splitbill-tests",
+  "version": "1.0.0",
+  "description": "Automated test suite for SplitBill application",
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx runTests.ts",
+    "test:dev": "API_URL=http://localhost:5000/api node --import tsx runTests.ts",
+    "test:prod": "API_URL=https://splitbill-api2.onrender.com/api node --import tsx runTests.ts",
+    "test:watch": "nodemon --exec 'npm run test' --ext ts"
+  },
+  "keywords": [
+    "test",
+    "automation",
+    "splitbill",
+    "api",
+    "integration"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "nodemon": "^3.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}

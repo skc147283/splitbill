@@ -1,0 +1,166 @@
+{
+  "summary": {
+    "totalTests": 4,
+    "passedTests": 4,
+    "failedTests": 0,
+    "totalAssertions": 31,
+    "passedAssertions": 31,
+    "failedAssertions": 0,
+    "successRate": "100.00%",
+    "totalDuration": "4604ms"
+  },
+  "results": [
+    {
+      "testName": "User Management",
+      "status": "passed",
+      "assertions": [
+        {
+          "name": "User 1 (Alice) registration",
+          "passed": true
+        },
+        {
+          "name": "User 2 (Bob) registration",
+          "passed": true
+        },
+        {
+          "name": "User 3 (Charlie) registration",
+          "passed": true
+        },
+        {
+          "name": "Alice login",
+          "passed": true
+        },
+        {
+          "name": "Alice token exists",
+          "passed": true
+        },
+        {
+          "name": "Bob login",
+          "passed": true
+        },
+        {
+          "name": "Charlie login",
+          "passed": true
+        },
+        {
+          "name": "Get Alice profile",
+          "passed": true
+        },
+        {
+          "name": "Alice email matches",
+          "passed": true
+        },
+        {
+          "name": "Get Bob profile",
+          "passed": true
+        },
+        {
+          "name": "Get Charlie profile",
+          "passed": true
+        }
+      ],
+      "duration": 3803
+    },
+    {
+      "testName": "Group Management",
+      "status": "passed",
+      "assertions": [
+        {
+          "name": "Group creation",
+          "passed": true
+        },
+        {
+          "name": "Group ID exists",
+          "passed": true
+        },
+        {
+          "name": "Get groups list",
+          "passed": true
+        },
+        {
+          "name": "Groups is an array",
+          "passed": true
+        },
+        {
+          "name": "Add Bob to group",
+          "passed": true
+        },
+        {
+          "name": "Add Charlie to group",
+          "passed": true
+        },
+        {
+          "name": "Get group details",
+          "passed": true
+        },
+        {
+          "name": "Group has members",
+          "passed": true
+        }
+      ],
+      "duration": 321
+    },
+    {
+      "testName": "Expense Tracking",
+      "status": "passed",
+      "assertions": [
+        {
+          "name": "Add Restaurant expense",
+          "passed": true
+        },
+        {
+          "name": "Expense 1 ID exists",
+          "passed": true
+        },
+        {
+          "name": "Add Hotel expense",
+          "passed": true
+        },
+        {
+          "name": "Expense 2 ID exists",
+          "passed": true
+        },
+        {
+          "name": "Add Gas expense",
+          "passed": true
+        },
+        {
+          "name": "Get expenses list",
+          "passed": true
+        },
+        {
+          "name": "Expenses is an array",
+          "passed": true
+        },
+        {
+          "name": "At least 3 expenses created",
+          "passed": true
+        }
+      ],
+      "duration": 356
+    },
+    {
+      "testName": "Settlement & Balance",
+      "status": "passed",
+      "assertions": [
+        {
+          "name": "Get settlements",
+          "passed": true
+        },
+        {
+          "name": "Settlements is an array",
+          "passed": true
+        },
+        {
+          "name": "Settlement endpoint accessible",
+          "passed": true
+        },
+        {
+          "name": "Settlement endpoint accessible",
+          "passed": true
+        }
+      ],
+      "duration": 124
+    }
+  ]
+}

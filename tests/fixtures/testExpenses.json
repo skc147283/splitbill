@@ -1,0 +1,58 @@
+{
+  "expenses": [
+    {
+      "id": "expense1",
+      "groupId": "group1",
+      "description": "Restaurant Dinner",
+      "amount": 300,
+      "paidBy": "user1",
+      "splitType": "equal",
+      "members": ["user1", "user2", "user3"],
+      "expectedSplits": {
+        "user1": 100,
+        "user2": 100,
+        "user3": 100
+      }
+    },
+    {
+      "id": "expense2",
+      "groupId": "group1",
+      "description": "Hotel Stay",
+      "amount": 600,
+      "paidBy": "user2",
+      "splitType": "equal",
+      "members": ["user1", "user2", "user3"],
+      "expectedSplits": {
+        "user1": 200,
+        "user2": 200,
+        "user3": 200
+      }
+    },
+    {
+      "id": "expense3",
+      "groupId": "group1",
+      "description": "Gas",
+      "amount": 120,
+      "paidBy": "user3",
+      "splitType": "equal",
+      "members": ["user1", "user2"],
+      "expectedSplits": {
+        "user1": 60,
+        "user2": 60
+      }
+    },
+    {
+      "id": "expense4",
+      "groupId": "group2",
+      "description": "Rent",
+      "amount": 2000,
+      "paidBy": "user1",
+      "splitType": "equal",
+      "members": ["user1", "user2"],
+      "expectedSplits": {
+        "user1": 1000,
+        "user2": 1000
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "totalTests": 2,
+    "passedTests": 1,
+    "failedTests": 1,
+    "totalAssertions": 19,
+    "passedAssertions": 17,
+    "failedAssertions": 2,
+    "successRate": "50.00%",
+    "totalDuration": "4034ms"
+  },
+  "results": [
+    {
+      "testName": "User Management",
+      "status": "passed",
+      "assertions": [
+        {
+          "name": "User 1 (Alice) registration",
+          "passed": true
+        },
+        {
+          "name": "User 2 (Bob) registration",
+          "passed": true
+        },
+        {
+          "name": "User 3 (Charlie) registration",
+          "passed": true
+        },
+        {
+          "name": "Alice login",
+          "passed": true
+        },
+        {
+          "name": "Alice token exists",
+          "passed": true
+        },
+        {
+          "name": "Bob login",
+          "passed": true
+        },
+        {
+          "name": "Charlie login",
+          "passed": true
+        },
+        {
+          "name": "Get Alice profile",
+          "passed": true
+        },
+        {
+          "name": "Alice email matches",
+          "passed": true
+        },
+        {
+          "name": "Get Bob profile",
+          "passed": true
+        },
+        {
+          "name": "Get Charlie profile",
+          "passed": true
+        }
+      ],
+      "duration": 3760
+    },
+    {
+      "testName": "Group Management",
+      "status": "failed",
+      "assertions": [
+        {
+          "name": "Group creation",
+          "passed": true
+        },
+        {
+          "name": "Group ID exists",
+          "passed": true
+        },
+        {
+          "name": "Get groups list",
+          "passed": true
+        },
+        {
+          "name": "Groups is an array",
+          "passed": true
+        },
+        {
+          "name": "Add Bob to group",
+          "passed": false
+        },
+        {
+          "name": "Add Charlie to group",
+          "passed": false
+        },
+        {
+          "name": "Get group details",
+          "passed": true
+        },
+        {
+          "name": "Group has members",
+          "passed": true
+        }
+      ],
+      "duration": 274
+    }
+  ]
+}

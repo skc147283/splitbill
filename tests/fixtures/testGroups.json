@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "id": "group1",
+      "name": "Trip to Vegas",
+      "description": "Vacation expense tracking",
+      "createdBy": "user1",
+      "members": ["user1", "user2", "user3"]
+    },
+    {
+      "id": "group2",
+      "name": "Roommate Expenses",
+      "description": "Shared apartment costs",
+      "createdBy": "user1",
+      "members": ["user1", "user2"]
+    }
+  ]
+}
