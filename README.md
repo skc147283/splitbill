@@ -56,6 +56,32 @@ SplitBill/
 └── README.md
 ```
 
+## Quick Deploy (FREE) 🚀
+
+### Deploy to Render.com in 5 Minutes
+
+Get your app live for FREE with no credit card required!
+
+**See [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md) for complete step-by-step guide:**
+
+1. Go to https://render.com
+2. Sign up with GitHub
+3. Connect your SplitBill repository
+4. Create backend web service
+5. Create frontend static site
+6. Done! Your app is live! 🎉
+
+**Live Demo**: Your app will be at `https://splitbill-app.onrender.com`
+
+### Alternative Deployment Platforms
+
+- **Railway.app**: $5/month free credits - See [DEPLOYMENT.md](DEPLOYMENT.md)
+- **DigitalOcean**: $4-5/month - Most affordable paid option
+- **Docker Compose**: Completely free - Run locally
+- **AWS, Heroku, Vercel**: See [DEPLOYMENT.md](DEPLOYMENT.md) for guides
+
+---
+
 ## Getting Started
 
 ### Prerequisites
