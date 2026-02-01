@@ -36,12 +36,11 @@ Complete step-by-step guide to deploy SplitBill (Backend + Frontend) to Render.c
 | Setting | Value |
 |---------|-------|
 | **Name** | `splitbill-api` |
-| **Environment** | `Node` |
 | **Region** | `Oregon (US West)` or closest to you |
 | **Branch** | `main` |
-| **Build Command** | `cd server && npm install && npm run build` |
-| **Start Command** | `node server/dist/index.js` |
 | **Plan** | `Free` |
+
+**Note**: Render will auto-detect the `Dockerfile` and use it automatically. You don't need to specify Build or Start commands.
 
 ### 2.3: Add Environment Variables
 

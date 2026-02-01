@@ -1,22 +1,37 @@
 # Dockerfile for backend deployment to Render.com
-# This is the server/backend deployment
+# Build stage
+FROM node:18-alpine AS builder
 
-FROM node:18-alpine
+WORKDIR /build
 
-WORKDIR /app
-
-# Copy package files
+# Copy server package files
 COPY server/package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy source code
+# Copy server source code
 COPY server/src ./src
 COPY server/tsconfig.json ./
 
 # Build the application
 RUN npm run build
+
+# Production stage
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy only production dependencies
+COPY server/package*.json ./
+RUN npm install --production
+
+# Copy built application from builder
+COPY --from=builder /build/dist ./dist
+
+# Expose port (Render will override this)
+EXPOSE 5000
+
+# Set environment
+ENV NODE_ENV=production
 
 # Start the application
 CMD ["node", "dist/index.js"]
