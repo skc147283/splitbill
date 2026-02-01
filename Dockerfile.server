@@ -1,0 +1,19 @@
+# Backend Dockerfile
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY server/package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy built application
+COPY server/dist ./dist
+
+# Expose port
+EXPOSE 5000
+
+# Start application
+CMD ["node", "dist/index.js"]

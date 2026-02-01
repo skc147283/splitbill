@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  splitbill-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: splitbill-server
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - JWT_SECRET=dev-secret-key-change-in-production
+      - DATABASE_PATH=/app/data/splitbill.db
+      - NODE_ENV=production
+    volumes:
+      - ./data:/app/data
+    networks:
+      - splitbill-network
+
+  splitbill-client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: splitbill-client
+    ports:
+      - "3000:80"
+    depends_on:
+      - splitbill-server
+    networks:
+      - splitbill-network
+
+networks:
+  splitbill-network:
+    driver: bridge
