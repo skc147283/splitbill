@@ -1,8 +1,16 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.MODE === 'production' 
-  ? 'https://splitbill-api2.onrender.com/api'
-  : '/api';
+// Determine API URL based on environment
+const getApiBaseUrl = () => {
+  if (import.meta.env.PROD) {
+    // Production mode
+    return import.meta.env.VITE_API_URL || 'https://splitbill-api.onrender.com/api';
+  }
+  // Development mode - use proxy
+  return '/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 const api = axios.create({
   baseURL: API_BASE_URL,
