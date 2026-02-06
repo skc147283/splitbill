@@ -1,0 +1,32 @@
+{
+  "name": "splitbill-ui-tests",
+  "version": "1.0.0",
+  "description": "Playwright UI test suite for SplitBill application",
+  "scripts": {
+    "test": "TEST_MODE=local playwright test",
+    "test:local": "TEST_MODE=local playwright test",
+    "test:local:headed": "TEST_MODE=local playwright test --headed",
+    "test:local:debug": "TEST_MODE=local playwright test --debug",
+    "test:local:chromium": "TEST_MODE=local playwright test --project=chromium",
+    "test:production": "TEST_MODE=production playwright test",
+    "test:prod": "TEST_MODE=production playwright test",
+    "test:prod:headed": "TEST_MODE=production playwright test --headed",
+    "test:prod:debug": "TEST_MODE=production playwright test --debug",
+    "test:prod:chromium": "TEST_MODE=production playwright test --project=chromium",
+    "test:headed": "TEST_MODE=local playwright test --headed",
+    "test:debug": "TEST_MODE=local playwright test --debug",
+    "test:chromium": "TEST_MODE=local playwright test --project=chromium",
+    "test:firefox": "TEST_MODE=local playwright test --project=firefox",
+    "test:webkit": "TEST_MODE=local playwright test --project=webkit",
+    "test:mobile": "TEST_MODE=local playwright test --project='Mobile Chrome'",
+    "test:all-browsers": "TEST_MODE=local playwright test --project=chromium --project=firefox --project=webkit",
+    "test:headless": "TEST_MODE=local playwright test",
+    "test:ui": "TEST_MODE=local playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

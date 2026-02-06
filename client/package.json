@@ -5,9 +5,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode development",
+    "dev:local": "vite --mode development",
+    "dev:prod": "vite --mode production",
     "build": "vite build",
+    "build:local": "vite build --mode development",
+    "build:production": "vite build --mode production",
     "preview": "vite preview",
+    "preview:local": "vite preview --mode development",
+    "preview:production": "vite preview --mode production",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {

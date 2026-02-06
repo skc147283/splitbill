@@ -1,0 +1,958 @@
+<testsuites id="" name="" tests="112" failures="12" skipped="12" errors="0" time="111.434475">
+<testsuite name="auth.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="chromium" tests="7" failures="1" skipped="0" time="54.34" errors="0">
+<testcase name="Authentication Tests › [AUTH-001] User should register successfully" classname="auth.spec.ts" time="7.583">
+<failure message="auth.spec.ts:12:7 [AUTH-001] User should register successfully" type="FAILURE">
+<![CDATA[  [chromium] › auth.spec.ts:12:7 › Authentication Tests › [AUTH-001] User should register successfully 
+
+    TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('button:has-text("Register")') to be visible
+
+
+       at ../utils/pageObjects.ts:80
+
+      78 |
+      79 |   async clickRegisterButton() {
+    > 80 |     await this.page.waitForSelector('button:has-text("Register")', { timeout: 5000 });
+         |                     ^
+      81 |     await this.page.click('button:has-text("Register")');
+      82 |   }
+      83 |
+        at RegisterPage.clickRegisterButton (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:80:21)
+        at RegisterPage.register (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:88:16)
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/auth.spec.ts:17:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Tests › [AUTH-002] User should login successfully" classname="auth.spec.ts" time="21.914">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-003] User should see error on invalid credentials" classname="auth.spec.ts" time="13.069">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-004] User should be able to navigate to register from login" classname="auth.spec.ts" time="2.639">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-005] Demo user (john@example.com) should login successfully" classname="auth.spec.ts" time="3.978">
+</testcase>
+<testcase name="Session Management › [SESSION-001] User should remain logged in after page refresh" classname="auth.spec.ts" time="3.582">
+</testcase>
+<testcase name="Session Management › [SESSION-002] Logout should clear session" classname="auth.spec.ts" time="1.575">
+</testcase>
+</testsuite>
+<testsuite name="expenses.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="chromium" tests="5" failures="0" skipped="0" time="18.163" errors="0">
+<testcase name="Expense Management Tests › [EXPENSE-001] User should see expenses page" classname="expenses.spec.ts" time="3.563">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-002] User should be able to add an expense" classname="expenses.spec.ts" time="3.533">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-003] User should see expenses list" classname="expenses.spec.ts" time="3.823">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-004] Expense should have required fields displayed" classname="expenses.spec.ts" time="3.666">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-005] User should be able to view expense details" classname="expenses.spec.ts" time="3.578">
+</testcase>
+</testsuite>
+<testsuite name="groups.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="chromium" tests="5" failures="0" skipped="0" time="32.421" errors="0">
+<testcase name="Group Management Tests › [GROUP-001] User should see groups page" classname="groups.spec.ts" time="7.552">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-002] User should be able to create a group" classname="groups.spec.ts" time="4.106">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-003] User should be able to view group details" classname="groups.spec.ts" time="3.581">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-004] User should be able to add member to group" classname="groups.spec.ts" time="13.601">
+<system-out>
+<![CDATA[Add member test error: page.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("Add Member")')[22m
+
+    at GroupDetailPage.clickAddMemberButton [90m(/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mutils/pageObjects.ts:182:21[90m)[39m
+    at GroupDetailPage.addMember [90m(/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mutils/pageObjects.ts:209:5[90m)[39m
+    at [90m/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mtests/groups.spec.ts:99:9 {
+  name: [32m'TimeoutError'[39m,
+  [32mSymbol(step)[39m: {
+    location: {
+      file: [32m'/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts'[39m,
+      line: [33m182[39m,
+      column: [33m21[39m,
+      function: [32m'GroupDetailPage.clickAddMemberButton'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m`Click locator('button:has-text("Add Member")')`[39m,
+    apiName: [32m'page.click'[39m,
+    params: { selector: [32m'button:has-text("Add Member")'[39m, timeout: [33m10000[39m },
+    group: [90mundefined[39m,
+    stepId: [32m'pw:api@45'[39m,
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [36m[TestInfoImpl][39m,
+      _stepId: [32m'pw:api@45'[39m,
+      _title: [32m`Click locator('button:has-text("Add Member")')`[39m,
+      _parentStep: [90mundefined[39m,
+      skip: [36m[Function (anonymous)][39m
+    },
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1770348447830[39m,
+    error: {
+      message: [32m'TimeoutError: page.click: Timeout 10000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m`\x1B[2m  - waiting for locator('button:has-text("Add Member")')\x1B[22m\n`[39m,
+      stack: [32m'TimeoutError: page.click: Timeout 10000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m`\x1B[2m  - waiting for locator('button:has-text("Add Member")')\x1B[22m\n`[39m +
+        [32m'\n'[39m +
+        [32m'    at GroupDetailPage.clickAddMemberButton (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:182:21)\n'[39m +
+        [32m'    at GroupDetailPage.addMember (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:209:5)\n'[39m +
+        [32m'    at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/groups.spec.ts:99:9'[39m,
+      cause: [90mundefined[39m
+    }
+  }
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Group Management Tests › [GROUP-005] User should see members list in group" classname="groups.spec.ts" time="3.581">
+</testcase>
+</testsuite>
+<testsuite name="production.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="chromium" tests="6" failures="2" skipped="3" time="6.938" errors="0">
+<testcase name="Production Tests - User and Group Creation › [PROD-001] Create multiple test users successfully" classname="production.spec.ts" time="4.192">
+<system-out>
+<![CDATA[User alice-1770348437894@test.com - Success: false, URL: http://localhost:3000/groups
+Created 3 test users
+]]>
+</system-out>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-002] Login with first created user" classname="production.spec.ts" time="0.177">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-003] Create a test group" classname="production.spec.ts" time="2.022">
+<failure message="production.spec.ts:125:7 [PROD-003] Create a test group" type="FAILURE">
+<![CDATA[  [chromium] › production.spec.ts:125:7 › Production Tests - User and Group Creation › [PROD-003] Create a test group 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      174 |     const exists = await groupLink.isVisible().catch(() => false);
+      175 |     console.log(`Group created: ${exists}`);
+    > 176 |     expect(exists).toBeTruthy();
+          |                    ^
+      177 |   });
+      178 |
+      179 |   test('[PROD-004] Add members to the created group', async ({ page }) => {
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/production.spec.ts:176:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[Creating group: TestGroup-1770348442336-876
+Group created: false
+
+[[ATTACHMENT|../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-004] Add members to the created group" classname="production.spec.ts" time="0.146">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-005] Verify group details and members" classname="production.spec.ts" time="0.197">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-006] Verify all test data" classname="production.spec.ts" time="0.204">
+<failure message="production.spec.ts:274:7 [PROD-006] Verify all test data" type="FAILURE">
+<![CDATA[  [chromium] › production.spec.ts:274:7 › Production Tests - User and Group Creation › [PROD-006] Verify all test data 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      282 |     console.log('====================================');
+      283 |
+    > 284 |     expect(testUsers.length).toBeGreaterThan(0);
+          |                              ^
+      285 |   });
+      286 | });
+      287 |
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/production.spec.ts:284:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/production-Production-Test-c3d5e-OD-006-Verify-all-test-data-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[===== PRODUCTION TEST SUMMARY =====
+Total Users Created: 0
+Group Created: N/A
+====================================
+
+[[ATTACHMENT|../test-results/production-Production-Test-c3d5e-OD-006-Verify-all-test-data-chromium/test-failed-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="settlement.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="chromium" tests="5" failures="0" skipped="0" time="20.946" errors="0">
+<testcase name="Settlement Tests › [SETTLEMENT-001] User should see settlement/balance section" classname="settlement.spec.ts" time="5.163">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-002] Settlement should show correct parties" classname="settlement.spec.ts" time="3.601">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-003] Settlement amounts should be positive numbers" classname="settlement.spec.ts" time="4.935">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-004] User should be able to mark settlement as paid" classname="settlement.spec.ts" time="3.679">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-005] Settlement history should be visible" classname="settlement.spec.ts" time="3.568">
+</testcase>
+</testsuite>
+<testsuite name="auth.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="firefox" tests="7" failures="1" skipped="0" time="50.1" errors="0">
+<testcase name="Authentication Tests › [AUTH-001] User should register successfully" classname="auth.spec.ts" time="6.93">
+<failure message="auth.spec.ts:12:7 [AUTH-001] User should register successfully" type="FAILURE">
+<![CDATA[  [firefox] › auth.spec.ts:12:7 › Authentication Tests › [AUTH-001] User should register successfully 
+
+    TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('button:has-text("Register")') to be visible
+
+
+       at ../utils/pageObjects.ts:80
+
+      78 |
+      79 |   async clickRegisterButton() {
+    > 80 |     await this.page.waitForSelector('button:has-text("Register")', { timeout: 5000 });
+         |                     ^
+      81 |     await this.page.click('button:has-text("Register")');
+      82 |   }
+      83 |
+        at RegisterPage.clickRegisterButton (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:80:21)
+        at RegisterPage.register (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:88:16)
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/auth.spec.ts:17:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Tests › [AUTH-002] User should login successfully" classname="auth.spec.ts" time="21.29">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-003] User should see error on invalid credentials" classname="auth.spec.ts" time="12.386">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-004] User should be able to navigate to register from login" classname="auth.spec.ts" time="1.353">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-005] Demo user (john@example.com) should login successfully" classname="auth.spec.ts" time="3.279">
+</testcase>
+<testcase name="Session Management › [SESSION-001] User should remain logged in after page refresh" classname="auth.spec.ts" time="3.616">
+</testcase>
+<testcase name="Session Management › [SESSION-002] Logout should clear session" classname="auth.spec.ts" time="1.246">
+</testcase>
+</testsuite>
+<testsuite name="expenses.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="firefox" tests="5" failures="0" skipped="0" time="16.593" errors="0">
+<testcase name="Expense Management Tests › [EXPENSE-001] User should see expenses page" classname="expenses.spec.ts" time="3.389">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-002] User should be able to add an expense" classname="expenses.spec.ts" time="3.421">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-003] User should see expenses list" classname="expenses.spec.ts" time="2.839">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-004] Expense should have required fields displayed" classname="expenses.spec.ts" time="3.428">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-005] User should be able to view expense details" classname="expenses.spec.ts" time="3.516">
+</testcase>
+</testsuite>
+<testsuite name="groups.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="firefox" tests="5" failures="0" skipped="0" time="31.684" errors="0">
+<testcase name="Group Management Tests › [GROUP-001] User should see groups page" classname="groups.spec.ts" time="7.369">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-002] User should be able to create a group" classname="groups.spec.ts" time="3.98">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-003] User should be able to view group details" classname="groups.spec.ts" time="3.406">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-004] User should be able to add member to group" classname="groups.spec.ts" time="13.466">
+<system-out>
+<![CDATA[Add member test error: page.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("Add Member")')[22m
+
+    at GroupDetailPage.clickAddMemberButton [90m(/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mutils/pageObjects.ts:182:21[90m)[39m
+    at GroupDetailPage.addMember [90m(/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mutils/pageObjects.ts:209:5[90m)[39m
+    at [90m/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mtests/groups.spec.ts:99:9 {
+  name: [32m'TimeoutError'[39m,
+  [32mSymbol(step)[39m: {
+    location: {
+      file: [32m'/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts'[39m,
+      line: [33m182[39m,
+      column: [33m21[39m,
+      function: [32m'GroupDetailPage.clickAddMemberButton'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m`Click locator('button:has-text("Add Member")')`[39m,
+    apiName: [32m'page.click'[39m,
+    params: { selector: [32m'button:has-text("Add Member")'[39m, timeout: [33m10000[39m },
+    group: [90mundefined[39m,
+    stepId: [32m'pw:api@45'[39m,
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [36m[TestInfoImpl][39m,
+      _stepId: [32m'pw:api@45'[39m,
+      _title: [32m`Click locator('button:has-text("Add Member")')`[39m,
+      _parentStep: [90mundefined[39m,
+      skip: [36m[Function (anonymous)][39m
+    },
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1770348475845[39m,
+    error: {
+      message: [32m'TimeoutError: page.click: Timeout 10000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m`\x1B[2m  - waiting for locator('button:has-text("Add Member")')\x1B[22m\n`[39m,
+      stack: [32m'TimeoutError: page.click: Timeout 10000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m`\x1B[2m  - waiting for locator('button:has-text("Add Member")')\x1B[22m\n`[39m +
+        [32m'\n'[39m +
+        [32m'    at GroupDetailPage.clickAddMemberButton (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:182:21)\n'[39m +
+        [32m'    at GroupDetailPage.addMember (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:209:5)\n'[39m +
+        [32m'    at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/groups.spec.ts:99:9'[39m,
+      cause: [90mundefined[39m
+    }
+  }
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Group Management Tests › [GROUP-005] User should see members list in group" classname="groups.spec.ts" time="3.463">
+</testcase>
+</testsuite>
+<testsuite name="production.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="firefox" tests="6" failures="2" skipped="3" time="6.196" errors="0">
+<testcase name="Production Tests - User and Group Creation › [PROD-001] Create multiple test users successfully" classname="production.spec.ts" time="3.987">
+<system-out>
+<![CDATA[User alice-1770348465600@test.com - Success: false, URL: http://localhost:3000/groups
+Created 3 test users
+]]>
+</system-out>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-002] Login with first created user" classname="production.spec.ts" time="0.134">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-003] Create a test group" classname="production.spec.ts" time="1.71">
+<failure message="production.spec.ts:125:7 [PROD-003] Create a test group" type="FAILURE">
+<![CDATA[  [firefox] › production.spec.ts:125:7 › Production Tests - User and Group Creation › [PROD-003] Create a test group 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      174 |     const exists = await groupLink.isVisible().catch(() => false);
+      175 |     console.log(`Group created: ${exists}`);
+    > 176 |     expect(exists).toBeTruthy();
+          |                    ^
+      177 |   });
+      178 |
+      179 |   test('[PROD-004] Add members to the created group', async ({ page }) => {
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/production.spec.ts:176:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[Creating group: TestGroup-1770348469133-890
+Group created: false
+
+[[ATTACHMENT|../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-004] Add members to the created group" classname="production.spec.ts" time="0.129">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-005] Verify group details and members" classname="production.spec.ts" time="0.113">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-006] Verify all test data" classname="production.spec.ts" time="0.123">
+<failure message="production.spec.ts:274:7 [PROD-006] Verify all test data" type="FAILURE">
+<![CDATA[  [firefox] › production.spec.ts:274:7 › Production Tests - User and Group Creation › [PROD-006] Verify all test data 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      282 |     console.log('====================================');
+      283 |
+    > 284 |     expect(testUsers.length).toBeGreaterThan(0);
+          |                              ^
+      285 |   });
+      286 | });
+      287 |
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/production.spec.ts:284:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/production-Production-Test-c3d5e-OD-006-Verify-all-test-data-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[===== PRODUCTION TEST SUMMARY =====
+Total Users Created: 0
+Group Created: N/A
+====================================
+
+[[ATTACHMENT|../test-results/production-Production-Test-c3d5e-OD-006-Verify-all-test-data-firefox/test-failed-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="settlement.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="firefox" tests="5" failures="0" skipped="0" time="18.135" errors="0">
+<testcase name="Settlement Tests › [SETTLEMENT-001] User should see settlement/balance section" classname="settlement.spec.ts" time="3.897">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-002] Settlement should show correct parties" classname="settlement.spec.ts" time="3.867">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-003] Settlement amounts should be positive numbers" classname="settlement.spec.ts" time="3.464">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-004] User should be able to mark settlement as paid" classname="settlement.spec.ts" time="3.46">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-005] Settlement history should be visible" classname="settlement.spec.ts" time="3.447">
+</testcase>
+</testsuite>
+<testsuite name="auth.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="webkit" tests="7" failures="1" skipped="0" time="46.471" errors="0">
+<testcase name="Authentication Tests › [AUTH-001] User should register successfully" classname="auth.spec.ts" time="6.333">
+<failure message="auth.spec.ts:12:7 [AUTH-001] User should register successfully" type="FAILURE">
+<![CDATA[  [webkit] › auth.spec.ts:12:7 › Authentication Tests › [AUTH-001] User should register successfully 
+
+    TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('button:has-text("Register")') to be visible
+
+
+       at ../utils/pageObjects.ts:80
+
+      78 |
+      79 |   async clickRegisterButton() {
+    > 80 |     await this.page.waitForSelector('button:has-text("Register")', { timeout: 5000 });
+         |                     ^
+      81 |     await this.page.click('button:has-text("Register")');
+      82 |   }
+      83 |
+        at RegisterPage.clickRegisterButton (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:80:21)
+        at RegisterPage.register (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:88:16)
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/auth.spec.ts:17:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Tests › [AUTH-002] User should login successfully" classname="auth.spec.ts" time="20.846">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-003] User should see error on invalid credentials" classname="auth.spec.ts" time="11.841">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-004] User should be able to navigate to register from login" classname="auth.spec.ts" time="0.424">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-005] Demo user (john@example.com) should login successfully" classname="auth.spec.ts" time="2.505">
+</testcase>
+<testcase name="Session Management › [SESSION-001] User should remain logged in after page refresh" classname="auth.spec.ts" time="3.367">
+</testcase>
+<testcase name="Session Management › [SESSION-002] Logout should clear session" classname="auth.spec.ts" time="1.155">
+</testcase>
+</testsuite>
+<testsuite name="expenses.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="webkit" tests="5" failures="0" skipped="0" time="15.763" errors="0">
+<testcase name="Expense Management Tests › [EXPENSE-001] User should see expenses page" classname="expenses.spec.ts" time="3.294">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-002] User should be able to add an expense" classname="expenses.spec.ts" time="3.287">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-003] User should see expenses list" classname="expenses.spec.ts" time="2.504">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-004] Expense should have required fields displayed" classname="expenses.spec.ts" time="3.341">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-005] User should be able to view expense details" classname="expenses.spec.ts" time="3.337">
+</testcase>
+</testsuite>
+<testsuite name="groups.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="webkit" tests="5" failures="0" skipped="0" time="31.22" errors="0">
+<testcase name="Group Management Tests › [GROUP-001] User should see groups page" classname="groups.spec.ts" time="7.319">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-002] User should be able to create a group" classname="groups.spec.ts" time="3.882">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-003] User should be able to view group details" classname="groups.spec.ts" time="3.384">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-004] User should be able to add member to group" classname="groups.spec.ts" time="13.359">
+<system-out>
+<![CDATA[Add member test error: page.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("Add Member")')[22m
+
+    at GroupDetailPage.clickAddMemberButton [90m(/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mutils/pageObjects.ts:182:21[90m)[39m
+    at GroupDetailPage.addMember [90m(/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mutils/pageObjects.ts:209:5[90m)[39m
+    at [90m/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mtests/groups.spec.ts:99:9 {
+  name: [32m'TimeoutError'[39m,
+  [32mSymbol(step)[39m: {
+    location: {
+      file: [32m'/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts'[39m,
+      line: [33m182[39m,
+      column: [33m21[39m,
+      function: [32m'GroupDetailPage.clickAddMemberButton'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m`Click locator('button:has-text("Add Member")')`[39m,
+    apiName: [32m'page.click'[39m,
+    params: { selector: [32m'button:has-text("Add Member")'[39m, timeout: [33m10000[39m },
+    group: [90mundefined[39m,
+    stepId: [32m'pw:api@45'[39m,
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [36m[TestInfoImpl][39m,
+      _stepId: [32m'pw:api@45'[39m,
+      _title: [32m`Click locator('button:has-text("Add Member")')`[39m,
+      _parentStep: [90mundefined[39m,
+      skip: [36m[Function (anonymous)][39m
+    },
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1770348501050[39m,
+    error: {
+      message: [32m'TimeoutError: page.click: Timeout 10000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m`\x1B[2m  - waiting for locator('button:has-text("Add Member")')\x1B[22m\n`[39m,
+      stack: [32m'TimeoutError: page.click: Timeout 10000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m`\x1B[2m  - waiting for locator('button:has-text("Add Member")')\x1B[22m\n`[39m +
+        [32m'\n'[39m +
+        [32m'    at GroupDetailPage.clickAddMemberButton (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:182:21)\n'[39m +
+        [32m'    at GroupDetailPage.addMember (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:209:5)\n'[39m +
+        [32m'    at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/groups.spec.ts:99:9'[39m,
+      cause: [90mundefined[39m
+    }
+  }
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Group Management Tests › [GROUP-005] User should see members list in group" classname="groups.spec.ts" time="3.276">
+</testcase>
+</testsuite>
+<testsuite name="production.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="webkit" tests="6" failures="2" skipped="3" time="6.123" errors="0">
+<testcase name="Production Tests - User and Group Creation › [PROD-001] Create multiple test users successfully" classname="production.spec.ts" time="3.83">
+<system-out>
+<![CDATA[User alice-1770348491426@test.com - Success: false, URL: http://localhost:3000/groups
+Created 3 test users
+]]>
+</system-out>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-002] Login with first created user" classname="production.spec.ts" time="0.102">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-003] Create a test group" classname="production.spec.ts" time="1.685">
+<failure message="production.spec.ts:125:7 [PROD-003] Create a test group" type="FAILURE">
+<![CDATA[  [webkit] › production.spec.ts:125:7 › Production Tests - User and Group Creation › [PROD-003] Create a test group 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      174 |     const exists = await groupLink.isVisible().catch(() => false);
+      175 |     console.log(`Group created: ${exists}`);
+    > 176 |     expect(exists).toBeTruthy();
+          |                    ^
+      177 |   });
+      178 |
+      179 |   test('[PROD-004] Add members to the created group', async ({ page }) => {
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/production.spec.ts:176:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-webkit/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[Creating group: TestGroup-1770348494271-701
+Group created: false
+
+[[ATTACHMENT|../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-webkit/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-webkit/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-004] Add members to the created group" classname="production.spec.ts" time="0.255">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-005] Verify group details and members" classname="production.spec.ts" time="0.114">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-006] Verify all test data" classname="production.spec.ts" time="0.137">
+<failure message="production.spec.ts:274:7 [PROD-006] Verify all test data" type="FAILURE">
+<![CDATA[  [webkit] › production.spec.ts:274:7 › Production Tests - User and Group Creation › [PROD-006] Verify all test data 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      282 |     console.log('====================================');
+      283 |
+    > 284 |     expect(testUsers.length).toBeGreaterThan(0);
+          |                              ^
+      285 |   });
+      286 | });
+      287 |
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/production.spec.ts:284:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/production-Production-Test-c3d5e-OD-006-Verify-all-test-data-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[===== PRODUCTION TEST SUMMARY =====
+Total Users Created: 0
+Group Created: N/A
+====================================
+
+[[ATTACHMENT|../test-results/production-Production-Test-c3d5e-OD-006-Verify-all-test-data-webkit/test-failed-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="settlement.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="webkit" tests="5" failures="0" skipped="0" time="16.985" errors="0">
+<testcase name="Settlement Tests › [SETTLEMENT-001] User should see settlement/balance section" classname="settlement.spec.ts" time="3.551">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-002] Settlement should show correct parties" classname="settlement.spec.ts" time="3.389">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-003] Settlement amounts should be positive numbers" classname="settlement.spec.ts" time="3.421">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-004] User should be able to mark settlement as paid" classname="settlement.spec.ts" time="3.301">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-005] Settlement history should be visible" classname="settlement.spec.ts" time="3.323">
+</testcase>
+</testsuite>
+<testsuite name="auth.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="Mobile Chrome" tests="7" failures="1" skipped="0" time="53.966" errors="0">
+<testcase name="Authentication Tests › [AUTH-001] User should register successfully" classname="auth.spec.ts" time="7.503">
+<failure message="auth.spec.ts:12:7 [AUTH-001] User should register successfully" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › auth.spec.ts:12:7 › Authentication Tests › [AUTH-001] User should register successfully 
+
+    TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('button:has-text("Register")') to be visible
+
+
+       at ../utils/pageObjects.ts:80
+
+      78 |
+      79 |   async clickRegisterButton() {
+    > 80 |     await this.page.waitForSelector('button:has-text("Register")', { timeout: 5000 });
+         |                     ^
+      81 |     await this.page.click('button:has-text("Register")');
+      82 |   }
+      83 |
+        at RegisterPage.clickRegisterButton (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:80:21)
+        at RegisterPage.register (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:88:16)
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/auth.spec.ts:17:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/auth-Authentication-Tests--2824c-hould-register-successfully-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Authentication Tests › [AUTH-002] User should login successfully" classname="auth.spec.ts" time="22.299">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-003] User should see error on invalid credentials" classname="auth.spec.ts" time="12.88">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-004] User should be able to navigate to register from login" classname="auth.spec.ts" time="2.136">
+</testcase>
+<testcase name="Authentication Tests › [AUTH-005] Demo user (john@example.com) should login successfully" classname="auth.spec.ts" time="4.009">
+</testcase>
+<testcase name="Session Management › [SESSION-001] User should remain logged in after page refresh" classname="auth.spec.ts" time="3.592">
+</testcase>
+<testcase name="Session Management › [SESSION-002] Logout should clear session" classname="auth.spec.ts" time="1.547">
+</testcase>
+</testsuite>
+<testsuite name="expenses.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="Mobile Chrome" tests="5" failures="0" skipped="0" time="18.394" errors="0">
+<testcase name="Expense Management Tests › [EXPENSE-001] User should see expenses page" classname="expenses.spec.ts" time="4.97">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-002] User should be able to add an expense" classname="expenses.spec.ts" time="3.666">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-003] User should see expenses list" classname="expenses.spec.ts" time="2.629">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-004] Expense should have required fields displayed" classname="expenses.spec.ts" time="3.551">
+</testcase>
+<testcase name="Expense Management Tests › [EXPENSE-005] User should be able to view expense details" classname="expenses.spec.ts" time="3.578">
+</testcase>
+</testsuite>
+<testsuite name="groups.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="Mobile Chrome" tests="5" failures="0" skipped="0" time="32.668" errors="0">
+<testcase name="Group Management Tests › [GROUP-001] User should see groups page" classname="groups.spec.ts" time="7.572">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-002] User should be able to create a group" classname="groups.spec.ts" time="4.174">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-003] User should be able to view group details" classname="groups.spec.ts" time="3.567">
+</testcase>
+<testcase name="Group Management Tests › [GROUP-004] User should be able to add member to group" classname="groups.spec.ts" time="13.644">
+<system-out>
+<![CDATA[Add member test error: page.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("Add Member")')[22m
+
+    at GroupDetailPage.clickAddMemberButton [90m(/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mutils/pageObjects.ts:182:21[90m)[39m
+    at GroupDetailPage.addMember [90m(/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mutils/pageObjects.ts:209:5[90m)[39m
+    at [90m/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/[39mtests/groups.spec.ts:99:9 {
+  name: [32m'TimeoutError'[39m,
+  [32mSymbol(step)[39m: {
+    location: {
+      file: [32m'/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts'[39m,
+      line: [33m182[39m,
+      column: [33m21[39m,
+      function: [32m'GroupDetailPage.clickAddMemberButton'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m`Click locator('button:has-text("Add Member")')`[39m,
+    apiName: [32m'page.click'[39m,
+    params: { selector: [32m'button:has-text("Add Member")'[39m, timeout: [33m10000[39m },
+    group: [90mundefined[39m,
+    stepId: [32m'pw:api@45'[39m,
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [36m[TestInfoImpl][39m,
+      _stepId: [32m'pw:api@45'[39m,
+      _title: [32m`Click locator('button:has-text("Add Member")')`[39m,
+      _parentStep: [90mundefined[39m,
+      skip: [36m[Function (anonymous)][39m
+    },
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1770348528293[39m,
+    error: {
+      message: [32m'TimeoutError: page.click: Timeout 10000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m`\x1B[2m  - waiting for locator('button:has-text("Add Member")')\x1B[22m\n`[39m,
+      stack: [32m'TimeoutError: page.click: Timeout 10000ms exceeded.\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m`\x1B[2m  - waiting for locator('button:has-text("Add Member")')\x1B[22m\n`[39m +
+        [32m'\n'[39m +
+        [32m'    at GroupDetailPage.clickAddMemberButton (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:182:21)\n'[39m +
+        [32m'    at GroupDetailPage.addMember (/Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/utils/pageObjects.ts:209:5)\n'[39m +
+        [32m'    at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/groups.spec.ts:99:9'[39m,
+      cause: [90mundefined[39m
+    }
+  }
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Group Management Tests › [GROUP-005] User should see members list in group" classname="groups.spec.ts" time="3.711">
+</testcase>
+</testsuite>
+<testsuite name="production.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="Mobile Chrome" tests="6" failures="2" skipped="3" time="7.341" errors="0">
+<testcase name="Production Tests - User and Group Creation › [PROD-001] Create multiple test users successfully" classname="production.spec.ts" time="4.176">
+<system-out>
+<![CDATA[User alice-1770348518063@test.com - Success: false, URL: http://localhost:3000/groups
+Created 3 test users
+]]>
+</system-out>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-002] Login with first created user" classname="production.spec.ts" time="0.212">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-003] Create a test group" classname="production.spec.ts" time="2.084">
+<failure message="production.spec.ts:125:7 [PROD-003] Create a test group" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › production.spec.ts:125:7 › Production Tests - User and Group Creation › [PROD-003] Create a test group 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      174 |     const exists = await groupLink.isVisible().catch(() => false);
+      175 |     console.log(`Group created: ${exists}`);
+    > 176 |     expect(exists).toBeTruthy();
+          |                    ^
+      177 |   });
+      178 |
+      179 |   test('[PROD-004] Add members to the created group', async ({ page }) => {
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/production.spec.ts:176:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[Creating group: TestGroup-1770348522228-762
+Group created: false
+
+[[ATTACHMENT|../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/production-Production-Test-2a2a5-ROD-003-Create-a-test-group-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-004] Add members to the created group" classname="production.spec.ts" time="0.234">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-005] Verify group details and members" classname="production.spec.ts" time="0.238">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Production Tests - User and Group Creation › [PROD-006] Verify all test data" classname="production.spec.ts" time="0.397">
+<failure message="production.spec.ts:274:7 [PROD-006] Verify all test data" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › production.spec.ts:274:7 › Production Tests - User and Group Creation › [PROD-006] Verify all test data 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      282 |     console.log('====================================');
+      283 |
+    > 284 |     expect(testUsers.length).toBeGreaterThan(0);
+          |                              ^
+      285 |   });
+      286 | });
+      287 |
+        at /Users/sureshkc/Desktop/demo/SplitBill/playwright-tests/tests/production.spec.ts:284:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/production-Production-Test-c3d5e-OD-006-Verify-all-test-data-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[===== PRODUCTION TEST SUMMARY =====
+Total Users Created: 0
+Group Created: N/A
+====================================
+
+[[ATTACHMENT|../test-results/production-Production-Test-c3d5e-OD-006-Verify-all-test-data-Mobile-Chrome/test-failed-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="settlement.spec.ts" timestamp="2026-02-06T03:26:58.657Z" hostname="Mobile Chrome" tests="5" failures="0" skipped="0" time="21.013" errors="0">
+<testcase name="Settlement Tests › [SETTLEMENT-001] User should see settlement/balance section" classname="settlement.spec.ts" time="3.689">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-002] Settlement should show correct parties" classname="settlement.spec.ts" time="3.726">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-003] Settlement amounts should be positive numbers" classname="settlement.spec.ts" time="4.898">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-004] User should be able to mark settlement as paid" classname="settlement.spec.ts" time="5.078">
+</testcase>
+<testcase name="Settlement Tests › [SETTLEMENT-005] Settlement history should be visible" classname="settlement.spec.ts" time="3.622">
+</testcase>
+</testsuite>
+</testsuites>
